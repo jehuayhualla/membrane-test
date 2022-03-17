@@ -16,7 +16,6 @@ import {
  * Taken from https://github.com/DefinitelyTyped/DefinitelyTyped/issues/32914
  */
 
-// Update your breakpoints if you want
 export const sizes = {
   small: 600,
   medium: 1024,
