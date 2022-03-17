@@ -58,6 +58,10 @@ export const useBalance = (
   return balance;
 };
 
+function randomIntFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 export const sendAnswers = async (
   answers?: number[],
   provider?: ReturnType<Web3ReactHooks['useProvider']>,
@@ -65,7 +69,7 @@ export const sendAnswers = async (
 ) => {
   if (provider && accounts?.length) {
     const contract = new Contract(tokenAddress, quizABI, provider.getSigner());
-    await contract.submit(0, answers, {
+    await contract.submit(randomIntFromInterval(0, 99999), answers, {
       gasLimit: 100000,
     });
   }
