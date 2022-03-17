@@ -14,15 +14,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-import {
-  hooks,
-  metaMask,
-  connectMetamask,
-  disconnectMetamask,
-  useBalance,
-  tokenSymbol,
-  sendAnswers,
-} from 'utils/metamask';
+import { hooks, sendAnswers } from 'utils/metamask';
 
 import { useInterval } from '../../../utils/hooks';
 
