@@ -114,6 +114,9 @@ export function Quiz() {
         justifyContent="center"
         marginTop={1}
       >
+        <Typography m={2} variant="h3" component="div">
+          Quiz: {data.title}
+        </Typography>
         <Button
           onClick={() => {
             setStart(true);
